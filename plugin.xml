@@ -16,7 +16,7 @@ version="0.0.1">
   </engines>
 
 
-  <js-module src="www/Orientation.js" name="OrientationLock">
+  <js-module src="www/OrientationLock.js" name="OrientationLock">
       <clobbers target="OrientationLock" />
   </js-module>
 
