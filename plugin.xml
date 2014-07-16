@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.alexwasner.plugins.orientationlock"
-        version="0.0.1">
+id="com.alexwasner.plugins.orientationlock"
+version="0.0.1">
 
-        <name>OrientationLock</name>
+  <name>OrientationLock</name>
 
-                <description>
-                        This plugin allows you to lock and unlock the app's orientation
-                </description>
+      <description>
+        This plugin allows you to change the app's orientation
+      </description>
 
-                <license>MIT</license>
+      <license>MIT</license>
 
-        <engines>
-                <engine name="cordova" version=">=3.0" />
-        </engines>
+  <engines>
+      <engine name="cordova" version=">=3.0.0" />
+  </engines>
 
 
-        <js-module src="www/OrientationLock.js" name="OrientationLock">
-                <clobbers target="OrientationLock" />
-        </js-module>
+  <js-module src="www/Orientation.js" name="OrientationLock">
+      <clobbers target="OrientationLock" />
+  </js-module>
 
-        <!-- ios -->
-        <platform name="ios">
-                <config-file target="config.xml" parent="/*">
-                        <feature name="OrientationLock">
-                                <param name="ios-package" value="OrientationLock" />
-                        </feature>
-                </config-file>
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="OrientationLock">
+        <param name="ios-package" value="OrientationLock" />
+      </feature>
+    </config-file>
 
-                <header-file src="src/ios/OrientationLock.h" />
-                <source-file src="src/ios/OrientationLock.m" />
+    <header-file src="src/ios/OrientationLock.h" />
+    <source-file src="src/ios/OrientationLock.m" />
 
-                <framework src="Foundation.framework" weak="true" />
-        </platform>
+    <framework src="Foundation.framework" weak="true" />
+  </platform>
 
-        <!-- android -->
-        <platform name="android">
-                <config-file target="res/xml/config.xml" parent="/widget">
-                    <feature name="OrientationLock">
-                        <param name="android-package" value="com.alexwasner.plugins.orientation.OrientationLock" />
-                    </feature>
-                </config-file>
-                <source-file src="src/android/OrientationLock.java" target-dir="src/com/alexwasner/plugins/orientationlock" />
-        </platform>
+  <!-- android -->
+  <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/widget">
+        <feature name="OrientationLock">
+            <param name="android-package" value="com.alexwasner.plugins.OrientationLock" />
+        </feature>
+      </config-file>
+      <source-file src="src/android/OrientationLock.java" target-dir="src/com/feedhenry/phonegap/orientation" />
+  </platform>
 
 </plugin>
