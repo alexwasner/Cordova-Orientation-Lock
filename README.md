@@ -5,11 +5,19 @@ A cordova plugin to lock and unlock the orientation of the UI programmatically.
 
 Currently supports iOS and Android.
 
+##Usage
 
-#Important Note for usage:
-##iOS
+```
+ window.plugins.orientationLock.lock(function(){},function(){});
+ window.plugins.orientationLock.unlock(function(){},function(){});
+```
+
+###Important Note for usage on iOS
+
+In your XCode Project, set the preferences for all the orientations you want to have access to. if you want the app to lock in portrait, call lock() upon initialization of your webapp.
+
+
 Add this to your MainViewController.m
-
 
 ```
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
