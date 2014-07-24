@@ -41,7 +41,7 @@ version="0.0.1">
             <param name="android-package" value="com.alexwasner.plugins.OrientationLock" />
         </feature>
       </config-file>
-      <source-file src="src/android/OrientationLock.java" target-dir="src/com/alexwasner/plugins/orientationLock" />
+      <source-file src="src/android/OrientationLock.java" target-dir="src/com/alexwasner/plugins/orientationlock" />
   </platform>
 
 </plugin>
