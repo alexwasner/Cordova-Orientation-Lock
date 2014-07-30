@@ -36,9 +36,9 @@ version="0.0.1">
 
   <!-- android -->
   <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/widget">
+        <config-file target="config.xml" parent="/*">
         <feature name="OrientationLock">
-            <param name="android-package" value="com.alexwasner.plugins.OrientationLock" />
+            <param name="android-package" value="com.alexwasner.plugins.orientationlock.OrientationLock" />
         </feature>
       </config-file>
       <source-file src="src/android/OrientationLock.java" target-dir="src/com/alexwasner/plugins/orientationlock" />
