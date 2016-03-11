@@ -15,7 +15,7 @@
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     MainViewController *rootViewController = (MainViewController*) window.rootViewController;
     [rootViewController setRotationAllowed:NO];
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.plugins.orientationLock.success('%s');", "success"]];
+    [(UIWebView*)self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.plugins.orientationLock.success('%s');", "success"]];
 }
 
 - (void) unlock:(CDVInvokedUrlCommand*)command
@@ -23,7 +23,7 @@
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     MainViewController *rootViewController = (MainViewController*) window.rootViewController;
     [rootViewController setRotationAllowed:YES];
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.plugins.orientationLock.success('%s');", "success"]];
+    [(UIWebView*)self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.plugins.orientationLock.success('%s');", "success"]];
 }
 
 @end
