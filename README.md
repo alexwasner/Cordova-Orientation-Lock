@@ -20,6 +20,11 @@ In your XCode Project, set the preferences for all the orientations you want to 
 Add this to your MainViewController.m
 
 ```
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return self.canRotate ? UIInterfaceOrientationMaskAllButUpsideDown : UIInterfaceOrientationMaskPortrait;
+}
+// LEGACY iOS < 6
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
